@@ -10,7 +10,7 @@ const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className=" px-3 w-full sticky top-0 left-0 z-50">
+    <nav className=" px-3 w-full sticky top-0 left-0 z-5000 bg-white">
       <div className="flex justify-between items-center">
         {/* Logo */}
         <div>
