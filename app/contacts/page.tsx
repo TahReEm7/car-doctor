@@ -54,7 +54,7 @@ const Contact: React.FC = () => {
 
   return (
     <div className="bg-gray-50 flex flex-col items-center justify-center px-6 py-12">
-      <div className="max-w-3xl w-full bg-white rounded-2xl shadow-lg p-8 md:p-12">
+      <div className="max-w-5xl w-full bg-white rounded-2xl shadow-lg p-8 md:p-12">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
           Contact Us
         </h2>
