@@ -37,7 +37,7 @@ const slides: Slide[] = [
 const Banner: React.FC = () => {
   const [current, setCurrent] = useState<number>(0);
   const total: number = slides.length;
-  const nextIndex: number = (current + 1) % total;
+  // const nextIndex: number = (current + 1) % total;
 
   const prevSlide = (): void => setCurrent(current === 0 ? total - 1 : current - 1);
   const nextSlide = (): void => setCurrent(current === total - 1 ? 0 : current + 1);

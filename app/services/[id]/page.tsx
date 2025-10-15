@@ -32,8 +32,10 @@ const Page: React.FC = () => {
       })
       .catch((err) => console.error("Error loading services:", err));
   }, [id]);
+   
 
   if (!service) return <p>Loading or Service not found...</p>;
+   if (!services) return <p>Loading or Service not found...</p>;
 
   return (
     <div className="max-w-xl mx-auto p-4 border rounded shadow">
