@@ -49,9 +49,9 @@ const Nav = () => {
             <FiSearch size={22} />
           </button>
 
-          <button className="border border-red-600 text-red-600 px-4 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all duration-300">
-            Appointment
-          </button>
+         <Link href={"/contacts"} className="border border-red-600 text-red-600 px-4 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all duration-300">
+              Appointment
+            </Link>
         </div>
 
         {/* Mobile Hamburger */}
@@ -85,9 +85,9 @@ const Nav = () => {
               <FiSearch size={22} />
             </button>
 
-            <button className="border border-red-600 text-red-600 px-4 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all duration-300">
+            <Link href={"/contacts"} className="border border-red-600 text-red-600 px-4 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all duration-300">
               Appointment
-            </button>
+            </Link>
           </div>
         </div>
       )}

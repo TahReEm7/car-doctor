@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const AboutUs: React.FC = () => {
@@ -44,9 +45,9 @@ const AboutUs: React.FC = () => {
           <p className="text-[#737373] mb-6">
           the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. 
           </p>
-          <button className="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-all duration-300">
+          <Link href={"/about"} className="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-all duration-300">
             Get More Info
-          </button>
+          </Link>
         </div>
       </div>
     </section>

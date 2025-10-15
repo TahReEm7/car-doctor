@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
+import Link from "next/link";
 
 // ✅ Slide type
 interface Slide {
@@ -64,24 +65,24 @@ const Banner: React.FC = () => {
 
           {/* Buttons */}
           <div className="mt-4 flex flex-col sm:flex-row gap-2 sm:gap-4">
-            <button className="bg-red-600 px-4 py-2 rounded-lg hover:bg-red-700 transition text-sm sm:text-base">
+            <Link href={"/services"} className="bg-red-600 px-4 py-2 rounded-lg hover:bg-red-700 transition text-sm sm:text-base">
               Discover More
-            </button>
-            <button className="border border-white px-4 py-2 rounded-lg hover:bg-white hover:text-black transition text-sm sm:text-base">
+            </Link>
+            <Link href={"/blogs"} className="border border-white px-4 py-2 rounded-lg hover:bg-white hover:text-black transition text-sm sm:text-base">
               Latest Project
-            </button>
+            </Link>
           </div>
         </div>
 
         {/* Next Image Preview */}
-        <div className="absolute bottom-4 right-4 w-20 h-12 sm:w-24 sm:h-16 md:w-32 md:h-20 border border-white/50 overflow-hidden rounded-md shadow-lg">
+        {/* <div className="absolute bottom-4 right-4 w-20 h-12 sm:w-24 sm:h-16 md:w-32 md:h-20 border border-white/50 overflow-hidden rounded-md shadow-lg">
           <Image
             src={slides[nextIndex].image}
             alt="Next Slide"
             fill
             className="object-cover opacity-80"
           />
-        </div>
+        </div> */}
 
         {/* Prev Button */}
         <button

@@ -7,6 +7,7 @@ interface PageProps {
 }
 
 const Page: React.FC<PageProps> = ({ params }) => {
+  
   return (
     <div>
       <h1>Dynamic Page ID: {params.id}</h1>
