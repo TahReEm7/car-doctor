@@ -82,7 +82,7 @@ const OurServices: React.FC = () => {
       <div className="flex justify-center mt-10">
         <Link
           href="/services"
-          className="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-all duration-300"
+          className="text-red-600 border-2 border-red-600 px-6 py-2 rounded-lg hover:bg-red-700 hover:text-white transition-all duration-300"
         >
           More Services
         </Link>
