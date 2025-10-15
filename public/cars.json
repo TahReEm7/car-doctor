@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "title": "Engine Diagnostics",
+    "image": "/services/engine-diagnostics.jpg",
+    "price": 120,
+    "duration": "2-3 hours",
+    "category": "Engine",
+    "rating": 4.8,
+    "description": "Accurate engine scanning to identify issues before they turn into costly repairs."
+  },
+  {
+    "id": 2,
+    "title": "Oil Change & Filter Replacement",
+    "image": "/services/oil-change.jpg",
+    "price": 60,
+    "duration": "30-45 mins",
+    "category": "Maintenance",
+    "rating": 4.7,
+    "description": "Keep your engine running smoothly with fresh oil and new filters."
+  },
+  {
+    "id": 3,
+    "title": "Brake Inspection & Repair",
+    "image": "/services/brake-repair.jpg",
+    "price": 90,
+    "duration": "1-2 hours",
+    "category": "Brakes",
+    "rating": 4.9,
+    "description": "Ensure your safety with expert brake repair and replacement services."
+  },
+  {
+    "id": 4,
+    "title": "Tire Alignment & Balancing",
+    "image": "/services/tire-alignment.jpg",
+    "price": 70,
+    "duration": "1 hour",
+    "category": "Tires",
+    "rating": 4.6,
+    "description": "Improve driving stability and fuel efficiency with professional alignment."
+  },
+  {
+    "id": 5,
+    "title": "Car Wash & Interior Detailing",
+    "image": "/services/car-wash.jpg",
+    "price": 40,
+    "duration": "45-60 mins",
+    "category": "Cleaning",
+    "rating": 4.5,
+    "description": "Deep clean your car inside and out for a fresh, showroom-like feel."
+  },
+  {
+    "id": 6,
+    "title": "Battery Testing & Replacement",
+    "image": "/services/battery-replacement.jpg",
+    "price": 100,
+    "duration": "30 mins",
+    "category": "Electrical",
+    "rating": 4.8,
+    "description": "Fast battery inspection and installation to keep your car powered."
+  },
+  {
+    "id": 7,
+    "title": "Air Conditioning Service",
+    "image": "/services/ac-repair.jpg",
+    "price": 85,
+    "duration": "1 hour",
+    "category": "Cooling",
+    "rating": 4.7,
+    "description": "Stay cool with expert A/C repair, recharging, and performance check."
+  },
+  {
+    "id": 8,
+    "title": "Transmission Repair",
+    "image": "/services/transmission-repair.jpg",
+    "price": 350,
+    "duration": "3-5 hours",
+    "category": "Transmission",
+    "rating": 4.9,
+    "description": "Smooth shifting guaranteed with advanced transmission repair and servicing."
+  },
+  {
+    "id": 9,
+    "title": "Suspension & Steering",
+    "image": "/services/suspension.jpg",
+    "price": 150,
+    "duration": "2 hours",
+    "category": "Suspension",
+    "rating": 4.8,
+    "description": "Repair shocks, struts, and steering systems for a comfortable drive."
+  },
+  {
+    "id": 10,
+    "title": "Exhaust System Repair",
+    "image": "/services/exhaust.jpg",
+    "price": 130,
+    "duration": "2 hours",
+    "category": "Exhaust",
+    "rating": 4.6,
+    "description": "Improve performance and reduce emissions with exhaust system repair."
+  },
+  {
+    "id": 11,
+    "title": "Headlight Restoration",
+    "image": "/services/headlight.jpg",
+    "price": 50,
+    "duration": "45 mins",
+    "category": "Lighting",
+    "rating": 4.5,
+    "description": "Restore foggy headlights to improve visibility and appearance."
+  },
+  {
+    "id": 12,
+    "title": "Windshield Replacement",
+    "image": "/services/windshield.jpg",
+    "price": 200,
+    "duration": "2 hours",
+    "category": "Glass",
+    "rating": 4.8,
+    "description": "High-quality windshield replacement for safety and clarity."
+  },
+  {
+    "id": 13,
+    "title": "Electrical System Diagnostics",
+    "image": "/services/electrical.jpg",
+    "price": 110,
+    "duration": "1-2 hours",
+    "category": "Electrical",
+    "rating": 4.7,
+    "description": "Comprehensive testing and repair of your car’s electrical system."
+  },
+  {
+    "id": 14,
+    "title": "Paint & Body Repair",
+    "image": "/services/paint-body.jpg",
+    "price": 250,
+    "duration": "3-6 hours",
+    "category": "Bodywork",
+    "rating": 4.9,
+    "description": "Professional paintwork and dent removal to restore your car’s look."
+  }
+]
