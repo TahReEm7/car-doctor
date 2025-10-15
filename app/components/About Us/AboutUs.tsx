@@ -21,7 +21,7 @@ const AboutUs: React.FC = () => {
           </div>
 
           {/* Front Image */}
-          <div className="absolute right-20 top-40 w-56 h-56 md:w-70 md:h-75 rounded-lg overflow-hidden border-4 border-white shadow-xl hidden md:block">
+          <div className="absolute lg:right-[-10] md:right-[-15] top-40 w-56 h-56 md:w-65 md:h-70 rounded-lg overflow-hidden border-4 border-white shadow-xl hidden md:block">
             <Image
               src="/about-us2.jpg"
               alt="About Us 2"

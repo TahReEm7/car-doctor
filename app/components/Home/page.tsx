@@ -26,7 +26,7 @@ function HomePage() {
   }
 
   return (
-    <div>
+    <div className="max-w-5xl mx-auto">
       <Banner />
       <AboutUs />
       <OurServices />

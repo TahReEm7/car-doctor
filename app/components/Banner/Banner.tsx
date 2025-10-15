@@ -45,7 +45,7 @@ const Banner: React.FC = () => {
   return (
     <section className="relative w-full">
       {/* Slide */}
-      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] overflow-hidden rounded-xl">
+      <div className="relative w-full h-[50vh] sm:h-[30vh] md:h-[40vh] lg:h-[60vh] overflow-hidden rounded-xl">
         <Image
           src={slides[current].image}
           alt={slides[current].title}

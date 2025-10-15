@@ -30,7 +30,7 @@ export default function RootLayout({
       <body
         className={`${roboto.variable} font-sans antialiased `}
       >
-        <div className="w-11/12 mx-auto p-2">
+        <div className="w-11/12 min-h-screen mx-auto p-2">
            <Nav />
         {children}
         </div>
