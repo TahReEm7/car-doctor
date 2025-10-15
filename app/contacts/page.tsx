@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, ChangeEvent, FormEvent } from "react";
+import React, { useState, useEffect, ChangeEvent, FormEvent } from "react";
 import { FiMail, FiPhone, FiMapPin, FiSend, FiLoader } from "react-icons/fi";
 
 interface FormData {
@@ -18,6 +18,12 @@ const Contact: React.FC = () => {
 
   const [loading, setLoading] = useState<boolean>(false);
   const [submitted, setSubmitted] = useState<boolean>(false);
+  const [pageLoading, setPageLoading] = useState<boolean>(true); // Page loader
+
+  useEffect(() => {
+    const timer = setTimeout(() => setPageLoading(false), 1500); // simulate page load
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -38,8 +44,16 @@ const Contact: React.FC = () => {
     }, 2000);
   };
 
+  if (pageLoading) {
+    return (
+      <div className="min-h-screen flex justify-center items-center bg-gray-50">
+        <FiLoader className="animate-spin text-6xl text-red-600" />
+      </div>
+    );
+  }
+
   return (
-    <div className=" bg-gray-50 flex flex-col items-center justify-center px-6 py-12">
+    <div className="bg-gray-50 flex flex-col items-center justify-center px-6 py-12">
       <div className="max-w-3xl w-full bg-white rounded-2xl shadow-lg p-8 md:p-12">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
           Contact Us
@@ -57,7 +71,7 @@ const Contact: React.FC = () => {
           </div>
           <div>
             <FiMapPin className="mx-auto text-2xl text-red-600" />
-            <p className="mt-2 text-gray-700">Uttara , Dhaka</p>
+            <p className="mt-2 text-gray-700">Uttara, Dhaka</p>
           </div>
         </div>
 
@@ -156,4 +170,3 @@ const Contact: React.FC = () => {
 };
 
 export default Contact;
-

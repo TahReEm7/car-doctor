@@ -36,14 +36,15 @@ const Team: React.FC = () => {
   ];
 
   return (
-    <section className="my-10 text-center">
+    <section className="my-12 md:py-12 text-center">
+      <p className="text-red-500 text-xl font-bold">Team</p>
       <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
         Meet Our Expert Team
       </h2>
 
       <div className=" relative overflow-hidden">
         {/* Carousel Slides */}
-        <div className="flex justify-center gap-6 transition-all duration-500 ease-in-out">
+        <div className="flex justify-center gap-6 py-4 transition-all duration-500 ease-in-out">
           {visibleSlides.map((member) => (
             <div
               key={member.id}

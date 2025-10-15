@@ -1,6 +1,7 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from 'react';
+import { FiLoader } from 'react-icons/fi';
 
 interface BlogPost {
   id: number;
@@ -19,48 +20,48 @@ interface QA {
 const blogPosts: BlogPost[] = [
   {
     id: 1,
-    title: "How to Maintain Your Car Engine Like a Pro",
-    date: "October 10, 2025",
-    author: "Tahreem Hossain",
+    title: 'How to Maintain Your Car Engine Like a Pro',
+    date: 'October 10, 2025',
+    author: 'Tahreem Hossain',
     content:
-      "Regular oil changes, checking coolant levels, and timely servicing can significantly extend your car engine’s life. Learn the essential habits that keep your engine healthy.",
+      'Regular oil changes, checking coolant levels, and timely servicing can significantly extend your car engine’s life. Learn the essential habits that keep your engine healthy.',
   },
   {
     id: 2,
-    title: "Top 5 Signs Your Car Needs Immediate Service",
-    date: "September 28, 2025",
-    author: "Car Doctor Team",
+    title: 'Top 5 Signs Your Car Needs Immediate Service',
+    date: 'September 28, 2025',
+    author: 'Car Doctor Team',
     content:
-      "From strange noises to smoke under the hood — we cover the top warning signs that indicate it’s time to visit your mechanic before it’s too late.",
+      'From strange noises to smoke under the hood — we cover the top warning signs that indicate it’s time to visit your mechanic before it’s too late.',
   },
   {
     id: 3,
-    title: "Best Tips for Saving Fuel While Driving in the City",
-    date: "August 18, 2025",
-    author: "Tahreem Hossain",
+    title: 'Best Tips for Saving Fuel While Driving in the City',
+    date: 'August 18, 2025',
+    author: 'Tahreem Hossain',
     content:
-      "Smooth acceleration, maintaining steady speed, and regular tire checks can save you a lot of fuel. Here’s a guide for smarter, more efficient driving.",
+      'Smooth acceleration, maintaining steady speed, and regular tire checks can save you a lot of fuel. Here’s a guide for smarter, more efficient driving.',
   },
 ];
 
 const qnaData: QA[] = [
   {
     id: 1,
-    question: "How often should I change my car oil?",
+    question: 'How often should I change my car oil?',
     answer:
-      "Typically, every 5,000 to 7,000 kilometers, but it depends on your vehicle model and driving conditions. Always check your manufacturer’s manual for exact intervals.",
+      'Typically, every 5,000 to 7,000 kilometers, but it depends on your vehicle model and driving conditions. Always check your manufacturer’s manual for exact intervals.',
   },
   {
     id: 2,
-    question: "What are the most common reasons for engine overheating?",
+    question: 'What are the most common reasons for engine overheating?',
     answer:
-      "Low coolant levels, broken radiator fans, or a faulty thermostat are common causes. Regular maintenance helps prevent overheating issues.",
+      'Low coolant levels, broken radiator fans, or a faulty thermostat are common causes. Regular maintenance helps prevent overheating issues.',
   },
   {
     id: 3,
-    question: "Can I wash my car engine myself?",
+    question: 'Can I wash my car engine myself?',
     answer:
-      "Yes, but do it carefully. Cover electrical parts, use mild pressure, and avoid soaking sensitive areas. If unsure, let a professional handle it.",
+      'Yes, but do it carefully. Cover electrical parts, use mild pressure, and avoid soaking sensitive areas. If unsure, let a professional handle it.',
   },
 ];
 
@@ -70,6 +71,22 @@ const BlogPage: React.FC = () => {
   const toggleQuestion = (id: number): void => {
     setOpenQuestion(openQuestion === id ? null : id);
   };
+
+  const [loading, setLoading] = useState(true);
+
+  // Simulate loading (e.g., fetching data)
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex justify-center items-center bg-gray-50">
+        <FiLoader className="animate-spin text-6xl text-red-600" />
+      </div>
+    );
+  }
 
   return (
     <div className=" bg-gray-50 py-5 px-6">
@@ -116,7 +133,7 @@ const BlogPage: React.FC = () => {
                   {qa.question}
                 </h3>
                 <span className="text-red-600 text-xl">
-                  {openQuestion === qa.id ? "−" : "+"}
+                  {openQuestion === qa.id ? '−' : '+'}
                 </span>
               </div>
               {openQuestion === qa.id && (

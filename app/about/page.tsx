@@ -1,10 +1,26 @@
-"use client";
+'use client';
 
-import React from "react";
-import Image from "next/image";
-import { FiTool, FiHeart, FiUsers } from "react-icons/fi";
+import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
+import { FiHeart, FiLoader, FiTool, FiUsers } from 'react-icons/fi';
 
 const About: React.FC = () => {
+  const [loading, setLoading] = useState(true);
+
+  // Simulate loading (e.g., fetching data)
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex justify-center items-center bg-gray-50">
+        <FiLoader className="animate-spin text-6xl text-red-600" />
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-gray-50 py-5 px-6">
       <div className="max-w-5xl mx-auto">
@@ -16,14 +32,19 @@ const About: React.FC = () => {
         {/* Intro Section */}
         <div className="bg-white rounded-2xl shadow-md p-8 mb-12">
           <p className="text-gray-700 leading-relaxed text-lg mb-4">
-            Welcome to <span className="font-semibold text-red-600">Car Doctor</span> — your trusted automotive partner. 
-            We specialize in maintaining, repairing, and improving vehicles with the utmost care and professionalism. 
-            Our goal is to keep your car performing at its best, ensuring safety and reliability on every drive.
+            Welcome to{' '}
+            <span className="font-semibold text-red-600">Car Doctor</span> —
+            your trusted automotive partner. We specialize in maintaining,
+            repairing, and improving vehicles with the utmost care and
+            professionalism. Our goal is to keep your car performing at its
+            best, ensuring safety and reliability on every drive.
           </p>
           <p className="text-gray-700 leading-relaxed text-lg">
-            Founded in 2025 by <span className="font-semibold">Tahreem Hossain</span>, 
-            Car Doctor began as a small garage and has grown into a modern car service platform 
-            dedicated to providing high-quality, affordable, and transparent auto care solutions.
+            Founded in 2025 by{' '}
+            <span className="font-semibold">Tahreem Hossain</span>, Car Doctor
+            began as a small garage and has grown into a modern car service
+            platform dedicated to providing high-quality, affordable, and
+            transparent auto care solutions.
           </p>
         </div>
 
@@ -34,23 +55,32 @@ const About: React.FC = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-white shadow-md rounded-xl p-6 text-center">
             <FiTool className="mx-auto text-3xl text-red-600 mb-3" />
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">Quality Service</h3>
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              Quality Service
+            </h3>
             <p className="text-gray-600">
-              We ensure every repair and inspection meets the highest quality standards with modern diagnostic tools.
+              We ensure every repair and inspection meets the highest quality
+              standards with modern diagnostic tools.
             </p>
           </div>
           <div className="bg-white shadow-md rounded-xl p-6 text-center">
             <FiHeart className="mx-auto text-3xl text-red-600 mb-3" />
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">Customer Care</h3>
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              Customer Care
+            </h3>
             <p className="text-gray-600">
-              Your satisfaction is our priority. We believe in honest communication and friendly service.
+              Your satisfaction is our priority. We believe in honest
+              communication and friendly service.
             </p>
           </div>
           <div className="bg-white shadow-md rounded-xl p-6 text-center">
             <FiUsers className="mx-auto text-3xl text-red-600 mb-3" />
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">Expert Team</h3>
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              Expert Team
+            </h3>
             <p className="text-gray-600">
-              Our certified mechanics and technicians bring years of experience to deliver top-notch results.
+              Our certified mechanics and technicians bring years of experience
+              to deliver top-notch results.
             </p>
           </div>
         </div>
@@ -71,7 +101,8 @@ const About: React.FC = () => {
             <h3 className="text-xl font-semibold text-gray-800">John Smith</h3>
             <p className="text-red-600 mb-2">Lead Mechanic</p>
             <p className="text-gray-600 text-sm">
-              Expert in engine repair and diagnostics with over 10 years of experience.
+              Expert in engine repair and diagnostics with over 10 years of
+              experience.
             </p>
           </div>
 
@@ -86,7 +117,8 @@ const About: React.FC = () => {
             <h3 className="text-xl font-semibold text-gray-800">Sarah Khan</h3>
             <p className="text-red-600 mb-2">Customer Advisor</p>
             <p className="text-gray-600 text-sm">
-              Passionate about ensuring every customer receives transparent and friendly service.
+              Passionate about ensuring every customer receives transparent and
+              friendly service.
             </p>
           </div>
 
@@ -101,7 +133,8 @@ const About: React.FC = () => {
             <h3 className="text-xl font-semibold text-gray-800">Ali Ahmed</h3>
             <p className="text-red-600 mb-2">Electrical Specialist</p>
             <p className="text-gray-600 text-sm">
-              Skilled in car electrical systems, wiring, and diagnostic troubleshooting.
+              Skilled in car electrical systems, wiring, and diagnostic
+              troubleshooting.
             </p>
           </div>
         </div>

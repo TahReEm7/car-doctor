@@ -7,6 +7,7 @@ import OurServices from "../OurServices/OurServices";
 import Availability from "../Availibility/Availability";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import Team from "../Team/Team";
+import { FiLoader } from "react-icons/fi";
 
 function HomePage() {
   const [loading, setLoading] = useState(true);
@@ -17,11 +18,11 @@ function HomePage() {
   }, []);
 
   if (loading) {
-    return (
-      <div className="flex items-center justify-center h-screen">
-        <AiOutlineLoading3Quarters className="animate-spin text-6xl text-red-500" />
-      </div>
-    );
+     return (
+         <div className="min-h-screen flex justify-center items-center bg-gray-50">
+           <FiLoader className="animate-spin text-6xl text-red-600" />
+         </div>
+       );
   }
 
   return (
