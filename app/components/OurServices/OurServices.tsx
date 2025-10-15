@@ -30,6 +30,8 @@ const OurServices: React.FC = () => {
 
   const visibleServices = services.slice(0, 6);
 
+  if (!services) return <p>Loading or Service not found...</p>;
+
   return (
     <section className="py-12 md:py-20">
  
